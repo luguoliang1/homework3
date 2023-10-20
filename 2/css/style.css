@@ -1,0 +1,149 @@
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+/* 设置所有元素的边距和填充为0，使用Poppins字体 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+*/
+body {
+    /* 设置背景图片 */
+    background: #fff url(bg.jpg);
+    /* 设置背景图片的滚动模式 */
+    background-attachment: fixed;
+    /* 设置背景图片的混合模式 */
+    background-blend-mode: hard-light;
+}
+
+.container {
+    /* 绝对定位，使其可以放置在页面中任何位置 */
+    position: absolute;
+    /* 设置页面中距离顶部80px的位置 */
+    top: 80px;
+    /* 设置页面中距离左边100px的位置 */
+    left: 100px;
+    /* 设置页面中距离右边100px的位置 */
+    right: 100px;
+    /* 设置页面中距离底部80px的位置 */
+    bottom: 80px;
+    /* 设置背景图片 */
+    background: url(bg.jpg);
+    /* 设置背景图片的滚动模式 */
+    background-attachment: fixed;
+    /* 设置容器为flex布局 */
+    display: flex;
+    /* 设置flex容器的主轴对齐方式 */
+    justify-content: center;
+    /* 设置flex容器的主轴对齐方式 */
+    align-items: center;
+    /* 设置flex容器的方向 */
+    flex-direction: column;
+    /* 设置容器的阴影效果 */
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 100px rgba(0, 0, 0, .1);
+}
+
+
+.container h2 {
+    /* 设置文本居中 */
+    text-align: center;
+    /* 设置字体大小 */
+    font-size: 10em;
+    /* 设置行高 */
+    line-height: 0.7em;
+    /* 设置字体颜色 */
+    color: #333;
+    /* 设置顶部外边距 */
+    margin-top: -80px;
+}
+
+/* 设置容器内标题的样式，包括显示方式、字体权重、letter-spacing、字体大小 */
+.container h2 span {
+    display: block;
+    font-weight: 300;
+    letter-spacing: 6px;
+    font-size: 0.2em;
+}
+
+/* 设置倒计时容器的样式，包括显示方式、顶部间距 */
+.countdown {
+    display: flex;
+    margin-top: 50px;
+}
+
+
+.countdown div {
+    /* 选择类名为countdown的元素下的所有div元素 */
+    position: relative;
+    /* 定位方式是相对于它们的正常位置 */
+    width: 100px;
+    /* 宽度是100像素 */
+    height: 100px;
+    /* 高度是100像素 */
+    line-height: 100px;
+    /* 行高是100像素，让文字垂直居中 */
+    text-align: center;
+    /* 文字水平居中 */
+    background: #333;
+    /* 背景颜色是深灰色 */
+    color: #fff;
+    /* 文字颜色是白色 */
+    margin: 0 15px;
+    /* 外边距是上下0像素，左右15像素 */
+    font-size: 3em;
+    /* 字体大小是3倍于当前字体大小 */
+    font-weight: 500;
+    /* 字体粗细是500，数值越大越粗 */
+}
+
+.countdown div:before {
+    /* 选择类名为countdown的元素下的所有div元素的伪元素 */
+    content: '';
+    /* 设置伪元素的内容为空 */
+    position: absolute;
+    /* 设置伪元素的定位方式为绝对定位 */
+    bottom: -30px;
+    /* 设置伪元素的底部距离div元素的底部-30像素 */
+    left: 0;
+    /* 设置伪元素的左边距离div元素的左边0像素 */
+    width: 100%;
+    /* 设置伪元素的宽度为100% */
+    height: 35px;
+    /* 设置伪元素的高度为35像素 */
+    background: #ff0;
+    /* 设置伪元素的背景颜色为黄色 */
+    color: #333;
+    /* 设置伪元素的文字颜色为深灰色 */
+    font-size: 0.35em;
+    /* 设置伪元素的字体大小为0.35倍于当前字体大小 */
+    line-height: 35px;
+    /* 设置伪元素的行高为35像素，让文字垂直居中 */
+    font-weight: 300;
+    /* 设置伪元素的字体粗细为300，数值越小越细 */
+}
+
+.container #day:before {
+    /* 选择类名为container的元素下的id为day的元素的伪元素 */
+    content: 'Days';
+    /* 设置伪元素的内容为Days */
+}
+
+.container #hour:before {
+    /* 选择类名为container的元素下的id为hour的元素的伪元素 */
+    content: 'Hours';
+    /* 设置伪元素的内容为Hours */
+}
+
+.container #minute:before {
+    /* 选择类名为container的元素下的id为minute的元素的伪元素 */
+    content: 'Minutes';
+    /* 设置伪元素的内容为Minutes */
+}
+
+.container #second:before {
+    /* 选择类名为container的元素下的id为second的元素的伪元素 */
+    content: 'Seconds';
+    /* 设置伪元素的内容为Seconds */
+}
